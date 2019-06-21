@@ -1,0 +1,25 @@
+1）环境搭建：anaconda环境配置、解释器
+2）python初体验：print and input
+3）python基础讲解：python变量特性+命名规则、注释方法、python中“：”作用、学会使用dir( )及和help( )、import使用、pep8介绍
+4）python数值基本知识：python中数值类型（int，float，bool，e记法等）、算数运算符、逻辑运算符、成员运算符、身份运算符、运算符
+
+
+
+1）环境早已搭建好了。
+2）input()默认字符串，print可输出任意形式
+3）
+
+dir() 查询类或者对象的属性，help() 了解对象的详细信息，import 导入模块
+4）
+int 表示整型
+bool 表示布尔类型
+float 表示浮点型
+str 表示字符串
+运算符
+算术：+， -， *， /， %， **， //
+逻辑：and， or， not
+成员：in， not in
+身份：is， is not
+比较：==， ！=， <>， >， <， >=， <=
+位运：&， |， ^， ~， <<， >>
+赋值：=， +=， *=， /=， %=， =， //=
