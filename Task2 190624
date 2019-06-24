@@ -1,0 +1,95 @@
+#Task2
+1）列表：标志、基本操作(创建，append( )，pop( ) ,del( ), 拷贝）、列表相关方法
+2）元组：标志、基本操作（创建及不可变性）
+3）string字符串：定义及基本操作（+，*，读取方式）、字符串相关方法、字符串格式化问题
+
+#学习总结
+##列表
+列表（数据项不需要具有相同的类型）是最常用的Python数据类型，它可以作为一个方括号内的逗号分隔值出现，与字符串的索引一样，列表索引从0开始。
+a = [‘a’,‘b’,‘c’]
+
+###append()
+a.append[‘d’]
+
+###pop()
+a.pop() #删除列表末尾
+a.pop(i) #删除某个位置
+
+###del()
+del(a[2])
+
+###拷贝
+b = a.copy()
+
+###列表相关方法
+
+len(list) #列表元素个数
+max(list)#返回列表元素最大值
+min(list)#返回列表元素最小值
+list(seq)#将元组转换为列表
+
+list.append(obj)   在列表末尾添加新的对象
+list.count(obj)    统计某个元素在列表中出现的次数
+list.extend(seq)   在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）
+list.index(obj)    从列表中找出某个值第一个匹配项的索引位置
+list.insert(index, obj)   将对象插入列表
+list.pop([index=-1])    移除列表中的一个元素（默认最后一个元素），并且返回该元素的值
+list.remove(obj)    移除列表中某个值的第一个匹配项
+list.reverse()    反向列表中元素
+list.sort( key=None, reverse=False)    对原列表进行排序
+list.clear()    清空列表
+list.copy()    复制列表
+
+##元组
+Python的元组与列表类似，不同之处在于元组的元素不能修改。元组使用小括号，列表使用方括号。
+
+tup = (1, 2, '3')
+tup2 = (4, )  # 当只有一个元素时，也需要用逗号隔开，否则括号会被当成运算符
+print(tup[0:2])  # 访问元组
+print(tup + tup2)  # 元组的元素不能修改，但可以进行连接组合创建成一个新元组
+del tup2  # 不能修改元素，但可以删除整个元组
+print(1 in tup)  # 检查成员
+print(tup * 2)  # 复制元组，生成新的元组
+
+##String字符串
+字符串是 Python 中最常用的数据类型。可以使用引号('或")来创建字符串
+
+capitalize()    将字符串的第一个字符转换为大写
+center(width, fillchar)    返回一个指定的宽度 width 居中的字符串，fillchar 为填充的字符，默认为空格。
+count(str, beg= 0,end=len(string))    返回 str 在 string 里面出现的次数，如果 beg 或者 end 指定则返回指定范围内 str 出现的次数
+bytes.decode(encoding=“utf-8”, errors=“strict”)    Python3 中没有 decode 方法，但我们可以使用 bytes 对象的 decode() 方法来解码给定的 bytes 对象，这个 bytes 对象可以由 str.encode() 来编码返回。
+encode(encoding=‘UTF-8’,errors=‘strict’)    以 encoding 指定的编码格式编码字符串，如果出错默认报一个ValueError 的异常，除非 errors 指定的是’ignore’或者’replace’
+endswith(suffix, beg=0, end=len(string))    检查字符串是否以 obj 结束，如果beg 或者 end 指定则检查指定的范围内是否以 obj 结束，如果是，返回 True,否则返回 False.
+expandtabs(tabsize=8)    把字符串 string 中的 tab 符号转为空格，tab 符号默认的空格数是 8 。
+find(str, beg=0 end=len(string))    检测 str 是否包含在字符串中，如果指定范围 beg 和 end ，则检查是否包含在指定范围内，如果包含返回开始的索引值，否则返回-1
+index(str, beg=0, end=len(string))    跟find()方法一样，只不过如果str不在字符串中会报一个异常.
+isalnum()    如果字符串至少有一个字符并且所有字符都是字母或数字则返 回 True,否则返回 False
+isalpha()    如果字符串至少有一个字符并且所有字符都是字母则返回 True, 否则返回 False
+isdigit()    如果字符串只包含数字则返回 True 否则返回 False…
+islower()    如果字符串中包含至少一个区分大小写的字符，并且所有这些(区分大小写的)字符都是小写，则返回 True，否则返回 False
+isnumeric()    如果字符串中只包含数字字符，则返回 True，否则返回 False
+isspace()    如果字符串中只包含空白，则返回 True，否则返回 False.
+istitle()    如果字符串是标题化的(见 title())则返回 True，否则返回 False
+isupper()    如果字符串中包含至少一个区分大小写的字符，并且所有这些(区分大小写的)字符都是大写，则返回 True，否则返回 False
+join(seq)    以指定字符串作为分隔符，将 seq 中所有的元素(的字符串表示)合并为一个新的字符串
+len(string)    返回字符串长度
+ljust(width[, fillchar])    返回一个原字符串左对齐,并使用 fillchar 填充至长度 width 的新字符串，fillchar 默认为空格。
+lower()    转换字符串中所有大写字符为小写.	
+lstrip()    截掉字符串左边的空格或指定字符。
+maketrans()    创建字符映射的转换表，对于接受两个参数的最简单的调用方式，第一个参数是字符串，表示需要转换的字符，第二个参数也是字符串表示转换的目标。
+max(str)    返回字符串 str 中最大的字母。
+min(str)    返回字符串 str 中最小的字母。
+rfind(str, beg=0,end=len(string))    类似于 find()函数，不过是从右边开始查找.
+rindex( str, beg=0, end=len(string))    类似于 index()，不过是从右边开始.
+rjust(width,[, fillchar])    返回一个原字符串右对齐,并使用fillchar(默认空格）填充至长度 width 的新字符串
+rstrip()    删除字符串字符串末尾的空格.
+split(str="", num=string.count(str))    num=string.count(str)) 以 str 为分隔符截取字符串，如果 num 有指定值，则仅截取 num+1 个子字符串
+splitlines([keepends])    按照行(’\r’, ‘\r\n’, \n’)分隔，返回一个包含各行作为元素的列表，如果参数 keepends 为 False，不包含换行符，如果为 True，则保留换行符。
+startswith(substr, beg=0,end=len(string))    检查字符串是否是以指定子字符串 substr 开头，是则返回 True，否则返回 False。如果beg 和 end 指定值，则在指定范围内检查。
+strip([chars])   在字符串上执行 lstrip()和 rstrip()
+swapcase()    将字符串中大写转换为小写，小写转换为大写
+title()   返回"标题化"的字符串,就是说所有单词都是以大写开始，其余字母均为小写(见 istitle())
+translate(table, deletechars="")    根据 str 给出的表(包含 256 个字符)转换 string 的字符, 要过滤掉的字符放到 deletechars 参数中
+upper()    转换字符串中的小写字母为大写
+zfill (width)   返回长度为 width 的字符串，原字符串右对齐，前面填充0
+isdecimal()     检查字符串是否只包含十进制字符，如果是返回 true，否则返回 false。
